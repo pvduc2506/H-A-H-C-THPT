@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hóa Học Lớp 10</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'wood-dark': '#064e3b',    /* Sidebar / Deep Emerald */
+              'wood-panel': '#ffffff',   /* White panels */
+              'wood-primary': '#059669', /* Primary Action Green */
+              'wood-accent': '#10b981',  /* Brighter Green Accent */
+              'wood-soft': '#ecfdf5',    /* Very light mint background */
+              'text-main': '#334155',    /* Slate 700 for reading */
+              'text-heading': '#065f46', /* Dark Green Headings */
+              'sci-teal': '#0d9488',     /* Scientific Teal */
+              'chem-accent': '#d97706',  /* Amber for highlights */
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              mono: ['Fira Code', 'monospace'],
+            },
+            keyframes: {
+              'fade-in-up': {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              }
+            },
+            animation: {
+              'fade-in-up': 'fade-in-up 0.5s ease-out forwards',
+            }
+          }
+        }
+      }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code&display=swap" rel="stylesheet">
+    <script>
+      window.MathJax = {
+        startup: {
+          typeset: false 
+        },
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']],
+          displayMath: [['$$', '$$'], ['\\[', '\\]']],
+          processEscapes: true
+        },
+        options: {
+          ignoreHtmlClass: 'tex2jax_ignore',
+          processHtmlClass: 'tex2jax_process'
+        },
+        chtml: {
+          scale: 1.0,
+          minScale: 0.8,
+          displayAlign: 'center'
+        }
+      };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #ecfdf5; /* wood-soft */
+        color: #334155; /* text-main */
+        min-height: 100vh;
+      }
+      
+      /* Glass effect for Sidebar (Dark) */
+      .sidebar-panel {
+        background: linear-gradient(180deg, #064e3b 0%, #065f46 100%);
+        color: white;
+        box-shadow: 4px 0 24px rgba(0,0,0,0.1);
+      }
+
+      /* Card effect (Light) */
+      .content-card {
+        background: #ffffff;
+        border: 1px solid #d1fae5;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+      }
+
+      .wood-gradient-text {
+        background: linear-gradient(to right, #065f46, #059669);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      /* Formula Styling - Dark text for Light mode */
+      mjx-container {
+        color: #065f46 !important; /* Dark Green for Formulas */
+        font-size: 110% !important;
+        overflow-x: auto !important;
+        overflow-y: hidden;
+        max-width: 100%;
+        vertical-align: middle;
+        padding: 4px 0;
+      }
+      
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f1f5f9; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #cbd5e1; 
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #94a3b8; 
+      }
+    </style>
+    <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/client": "https://aistudiocdn.com/react-dom@^19.2.0/client",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.469.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
